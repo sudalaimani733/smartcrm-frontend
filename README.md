@@ -1,78 +1,101 @@
-SmartCRM — Frontend
+# SmartCRM Frontend
 
-A responsive CRM dashboard built with React and Tailwind CSS, providing an interactive interface for managing customers, leads, and sales deals — including a drag-and-drop Kanban board and live analytics visualizations powered by the SmartCRM Spring Boot backend.
+A React-based frontend for the SmartCRM application. It allows users to manage customers, leads, deals, activities, and view dashboard analytics through a responsive interface.
 
-Features
+## Features
 
+- User Login & Registration
+- JWT Authentication
+- Dashboard with Charts
+- Customer Management
+- Lead Management
+- Deal Pipeline
+- Activity Management
+- Responsive UI
+- Protected Routes
 
-Authentication — JWT-based login flow integrated with the backend auth API
-Customer & Lead Management — Create, view, and manage customer and lead records
-Sales Pipeline (Kanban) — Drag-and-drop deal pipeline for moving leads through sales stages
-Dashboard Analytics — Revenue and pipeline visualizations using Recharts
-Responsive UI — Built with Tailwind CSS for a clean, mobile-friendly layout
+## Tech Stack
 
+- React (Vite)
+- JavaScript
+- Tailwind CSS
+- React Router
+- Axios
+- Recharts
 
-Tech Stack
+## Folder Structure
 
-LayerTechnologyLibraryReactBuild ToolViteStylingTailwind CSSChartsRechartsHTTP ClientAxios / FetchContainerizationDocker (multi-stage build)
+```
+src
+ ├── components
+ ├── pages
+ ├── services
+ ├── hooks
+ ├── layouts
+ ├── context
+ ├── utils
+ └── assets
+```
 
-Project Structure
+## Installation
 
-src/
-├── components/       # Reusable UI components
-├── pages/              # Route-level pages (Dashboard, Leads, Deals, Customers)
-├── features/           # Feature-specific logic (Kanban board, charts)
-├── services/           # API calls to SmartCRM backend
-├── context/             # Auth context / global state
-└── utils/                # Helper functions
+Clone Repository
 
-Getting Started
+```bash
+git clone https://github.com/sudalaimani733/smartcrm-frontend.git
+```
 
-Prerequisites
+Install Dependencies
 
-
-Node.js 18+
-npm or yarn
-SmartCRM backend running locally or accessible via API URL
-
-
-Run locally
-
-bashgit clone https://github.com/<your-username>/smartcrm-frontend.git
-cd smartcrm-frontend
+```bash
 npm install
+```
+
+Run Development Server
+
+```bash
 npm run dev
+```
 
-The app will be available at http://localhost:5173 by default.
+Application runs at
 
-Environment Variables
+```
+http://localhost:5173
+```
 
-Create a .env file in the root:
+## API Configuration
 
-VITE_API_BASE_URL=http://localhost:8080/api
+Update API URL if required.
 
-Run with Docker
+Example
 
-bashdocker build -t smartcrm-frontend .
-docker run -p 5173:5173 smartcrm-frontend
+```javascript
+const BASE_URL = "http://localhost:8080/api";
+```
 
-Or run the full stack (frontend + backend + MySQL) via the backend repo's docker-compose.yml.
+## Main Pages
 
-Key UI Modules
+- Login
+- Register
+- Dashboard
+- Customers
+- Leads
+- Deals
+- Activities
 
+## Charts
 
-Dashboard — Revenue trends, lead conversion rate, and pipeline overview
-Leads — Table and detail views with lead scoring indicators
-Deals (Kanban) — Drag-and-drop board across pipeline stages (New → Contacted → Proposal → Won/Lost)
-Customers — Searchable customer directory with activity history
+Dashboard includes
 
+- Lead Status
+- Deal Pipeline
+- Sales Performance
+- Revenue Overview
 
-Related Repository
+## Future Improvements
 
-
-Backend: 
-
-
-
-Sudalaimani P
-LinkedIn · GitHub
+- Role-Based UI
+- Dark Mode
+- Notifications
+- Advanced Filters
+- Mobile Optimization
